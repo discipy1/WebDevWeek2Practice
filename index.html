@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HTML Lists, Images, Tables & Forms</title>
+    </head>
+    <body>
+        <h2>MAP OF AFRICA (HTML Lists)</h2>
+        <img src="africa-map.gif" width="400" alt="Map of Africa">
+        <h3>5 East African Countries (Ordered Lists)</h3>
+        <ol type="1" start="1"> <!--use i, I, 1, a, A and start at 1-->
+            <li>Kenya</li>
+            <li>Tanzania</li>
+            <li>Uganda</li>
+            <li>Somalia</li>
+            <li>Sudan</li>
+        </ol>
+        <h3>5 Northern Africa Countries (Un-Ordered Lists)</h3>
+        <ul type="square"></ul> <!--use disc, circle or square-->
+            <li>Libya</li>
+            <li>Algeria</li>
+            <li>Egypt</li>
+            <li>Morocco</li>
+            <li>Syria</li>
+        </ul>
+        <h3>Abbreviations Used (Definition lists)</h3>
+        <dl>
+            <dt>N.A</dt> <!--dt means definition term   dd means definition description-->
+            <dd>Northern Africa</dd>
+            <dt>W.A.</dt>
+            <dd>Western Africa</dd>
+            <dt>E.A.</dt>
+            <dd>Eastern Africa</dd>
+            <dt>C.A.</dt>
+            <dd>Central Africa</dd>
+            <dt>S.A.</dt>
+            <dd>Southern Africa</dd>
+        </dl>
+        <!--Those are the THREE types of lists in HTML-->
+        <h3>Maps of Africa (HTML Images)</h3>
+        <h3>Map of Nothern Africa</h3>
+        <img src="NorthAfricaMap.jpg" width="400" alt="Map of Northern Africa">
+        <h3>Map of West Africa</h3>
+        <img src="WestAfricaMap.png" width="400" alt="Map of West Afrcia">
+        <h3>Map of East Africa</h3>
+        <img src="https://www.worldatlas.com/r/w960-q80/upload/e9/3d/65/east-african-countries-1.png" alt="Map of East Africa" width="400">
+        <h2>Information about East Africa Countries (HTML Tables)</h2>
+        <table border="10">
+            <caption><strong>Biodata of East African Countries</strong></caption><!--caption is the title of the table-->
+            <thead>
+                <tr> <!--table is for table row. this is where the table headings for columns are put-->
+                    <th>Name of Country</th> <!--th is table head-->
+                    <th>Capital City</th>
+                    <th>Colonized by</th>
+                    <th>Year of Independence</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr> <!-- table row this is the row below the column title above-->
+                    <td>Kenya</td><!--td represents table data-->
+                    <td>Nairobi</td>
+                    <td>British</td>
+                    <td>1963</td>
+                </tr>
+                <tr>
+                    <td>Tanzania</td>
+                    <td>Dodoma</td>
+                    <td>Germany</td>
+                    <td>1963</td>
+                </tr>
+                <tr>
+                    <td>Kenya</td>
+                    <td>Nairobi</td>
+                    <td>British</td>
+                    <td>1963</td>
+                </tr>
+                <tr>
+                    <td>Rwanda</td>
+                    <td>Kigali</td>
+                    <td>France</td>
+                    <td>1963</td>
+                </tr>
+                <tr>
+                    <td>Burundi</td>
+                    <td>Bujumbura</td>
+                    <td>Portuguese</td>
+                    <td>1963</td>
+                </tr>
+                <tr>
+                    <td>Sudan</td>
+                    <td>Khartoum</td>
+                    <td>Germany</td>
+                    <td>1963</td>
+                </tr>
+                <tr>
+                    <td>Uganda</td>
+                    <td>Kampala</td>
+                    <td>British</td>
+                    <td>1987</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                <th>Name of Country</th> <!--when having a big table, the table footer is basically the same as the head so the the viewer doesnt have to scroll up to see what is on the column-->
+                    <th>Capital City</th>
+                    <th>Colonized by</th>
+                    <th>Year of Independence</th>
+                </tr>
+            </tfoot>
+        </table>
+        <h2>HTML Forms</h2>
+        <form action="" method=""> <!--action (used to specify the location or url where the data is transmitted once the form is filled and submitted) and method(specifies how the data will be transmitted) this is backend info-->
+            <label for="full_name"><strong>Full Names:</strong></label>
+            <input type="text" id="full_name" name="full_name" placeholder="Please enter your name" required>
+            <!--The <label> tag is used to provide a description for the input field. In this case, it displays the text "Full Names:" to let users know what they need to enter. The for="full_name" attribute links the label to the input field, ensuring that when a user clicks on the label, the cursor automatically moves to the input box. The <input> tag secifies the type of data the user should respond with. The type="text" means the input field accepts text(alternatively can be radio, button, drop down etc as seen below). The id="full_name" gives it a unique identifier, making it easier to reference in scripts or styles within this document. The name="full_name" is useful when submitting the form, as it ensures that the entered name is correctly labeled. The placeholder displays a hint inside the text box, which disappears when the user starts typing. Lastly, the required attribute ensures that users cannot leave this field empty when submitting the form.-->
+            <br><br>
+            <label for><strong>Gender:</strong></label>
+            <input type="radio" name="gender" value="Male">Male
+            <input type="radio" name="gender" value="Female">Female
+            <input type="radio" name="gender" value="Prefer_not_to_say">Prefer not to say
+            <br><br>
+            <label for="county_visited"><strong>Which East African country have you visited outside Kenya?</strong></label>
+            <br>
+            <input type="checkbox" name="name" value="Uganda">Uganda
+            <input type="checkbox" name="name" value="Tanzania">Tanzania
+            <input type="checkbox" name="name" value="Burundi">Burundi
+            <input type="checkbox" name="name" value="Rwanda">Rwanda
+            <input type="checkbox" name="name" value="Sudan">Sudan
+            <input type="checkbox" name="name" value="Somalia">Somalia
+            <input type="checkbox" name="name" value="Ethiopia">Ethiopia
+            <input type="checkbox" name="name" value="South Sudan">South Sudan
+            <input type="checkbox" name="name" value="Djibouti">Djibouti
+            <input type="checkbox" name="name" value="Eritrea">Eritrea
+            <br><br>
+            <label for="reason"><strong>Reason for travel:</strong></strong></label>
+            <select name="reason" id="reason">
+            <option value="N/A">N/A</option>
+            <option value="Official">Official</option>
+            <option value="Healthcare">Healthcare</option>
+            <option value="Work">Work</option>
+            <option value="Visit">Visit</option>
+            <option value="Other">Other</option>
+            </select>
+            <br><br>
+            <input type="submit" value="Submit">
+            <button type="reset">Cancel</button>
+        </form>
+    </body>
+</html>
